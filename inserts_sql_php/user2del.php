@@ -10,6 +10,11 @@ if (isset($_POST['id']))
     $stmt = $pdo->prepare($sql);
     $stmt->execute(array(':zip'=>$_POST['id']));
 }
-
-
 ?>
+
+<p> Delete a user </p>
+<form method="post">
+
+    <p>ID to delete: <input type="text" name="id"></p>
+    <p><input type="submit" value="Delete"></p>
+</form>
