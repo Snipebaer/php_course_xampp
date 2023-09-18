@@ -6,7 +6,7 @@ if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['password'])
 {
     $sql = "INSERT INTO users (name, email, password) VALUES (:name, :email, :password)";
 
-    echo "<pre>\n" . $sql . "\n</pre>\n";
+    #echo "<pre>\n" . $sql . "\n</pre>\n";
 
     $stmt = $pdo->prepare($sql);
     $stmt->execute(
